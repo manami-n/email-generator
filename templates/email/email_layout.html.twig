@@ -1,0 +1,128 @@
+{% extends 'result_base.html.twig' %}
+
+{% block code %}
+
+&lt;!DOCTYPE html>
+&lt;html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
+    &lt;head>
+        &lt;meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        &lt;meta name="viewport" content="width=device-width, initial-scale=1.0">
+        &lt;meta name="format-detection" content="telephone=no, date=no, address=no, email=no, url=no">
+        &lt;meta name="x-apple-disable-message-reformatting">
+        &lt;meta name="color-scheme" content="light dark">
+        &lt;meta name="supported-color-schemes" content="light dark">
+        &lt;title>Welcome to [Company Name]!&lt;/title>
+        &lt;style media="all" type="text/css">
+            @media all {
+                .btn-primary table td:hover { background-color: #ffffff !important; }
+                .btn-primary a:hover {
+                    background-color: #ffffff !important;
+                    border-color: {{color_footer}} !important;
+                    color: #000000;
+                }
+            }
+            @media only screen and (max-width: 640px) {
+                .main p, .main td, .main span { font-size: {{f_size}}px !important; }
+                .wrapper { padding: 0 8px 8px !important; }
+                .content { padding: 0 !important; }
+                .container {
+                    padding: 0 !important;
+                    padding-top: 8px !important;
+                    width: 100% !important;
+                }
+                .main {
+                    border-left-width: 0 !important;
+                    border-radius: 0 !important;
+                    border-right-width: 0 !important;
+                }
+                .btn table {
+                    max-width: 100% !important;
+                    width: 100% !important;
+                }
+                .btn a {
+                    font-size: {{f_size}}px !important;
+                    max-width: 100% !important;
+                    width: 100% !important;
+                }
+            }
+            @media all {
+                .ExternalClass { width: 100%; }
+                .ExternalClass, .ExternalClass p, .ExternalClass span, .ExternalClass font, .ExternalClass td, .ExternalClass div { line-height: 100%; }
+                .apple-link a {
+                    color: inherit !important;
+                    font-family: inherit !important;
+                    font-size: inherit !important;
+                    font-weight: inherit !important;
+                    line-height: inherit !important;
+                    text-decoration: underline !important;
+                }
+                #MessageViewBody a {
+                    color: inherit;
+                    text-decoration: none;
+                    font-size: inherit;
+                    font-family: inherit;
+                    font-weight: inherit;
+                    line-height: inherit;
+                }
+            }
+&lt;/style>
+    &lt;/head>
+    &lt;body style="font-family: {{f_fami}}; -webkit-font-smoothing: antialiased; font-size: {{f_size}}px; line-height: 1.3; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; background-color: {{color_bg}}; margin: 0; padding: 0;">
+        &lt;table role="presentation" border="0" cellpadding="0" cellspacing="0" class="body" style="border-collapse: separate; mso-table-lspace: 0pt; mso-table-rspace: 0pt; background-color: {{color_bg}}; width: 100%;" width="100%" bgcolor="{{color_bg}}">
+          &lt;tr>
+            &lt;td valign="top">&amp;nbsp;&lt;/td>
+            &lt;td class="container" style="font-family: {{f_fami}}; font-size: {{f_size}}px; vertical-align: top; max-width: 600px; padding: 20px 0 0 0; margin: 0 auto;" width="600" valign="top">
+              &lt;div class="content" style="box-sizing: border-box; display: block; margin: 0 auto; max-width: 600px; padding: 0;">
+                {% if logo is same as  "logo_out" %}
+                {% include "email/components/logo.html.twig" %}
+{% endif %}
+                {% if hd_type is same as  "with_hd" %}
+                 {% include "email/components/header.html.twig" %}
+{% endif %}
+                &lt;table role="presentation" border="0" cellpadding="0" cellspacing="0" class="main" style="border-collapse: separate; mso-table-lspace: 0pt; mso-table-rspace: 0pt; background: #ffffff; {% if shape is same as "round" %} border-radius: 16px; {% endif %} width: 100%;" width="100%">
+                  &lt;tr>
+                    &lt;td class="wrapper" style="font-family: {{f_fami}}; font-size: {{f_size}}px; vertical-align: top; box-sizing: border-box; padding: 0px 24px 24px; width:100%;" valign="top">
+                        {% if logo is same as  "logo_in" %}
+                        {% include "email/components/logo.html.twig" %}
+{% endif %}
+                      &lt;p style="font-family: {{f_fami}}; font-size: {{f_size}}px; font-weight: normal; margin: 0; margin-bottom: 20px; color: #000000;">Hi [User],&lt;/p>
+                      &lt;p style="font-family: {{f_fami}}; font-size: {{f_size}}px; font-weight: normal; margin: 0; margin-bottom: 20px; color: #000000;">Welcome to [Company Name]! We're excited to have you on board.&lt;/p>
+                      &lt;p style="font-family: {{f_fami}}; font-size: {{f_size}}px; font-weight: normal; margin: 0; margin-bottom: 20px; color: #000000;">To get started, simply click the link below and log in to your account.&lt;/p>
+                      &lt;table role="presentation" border="0" cellpadding="0" cellspacing="0" class="btn btn-primary" style="border-collapse: separate; mso-table-lspace: 0pt; mso-table-rspace: 0pt; box-sizing: border-box; width: 100%; min-width: 100%;" width="100%">
+                        &lt;tbody>
+                          &lt;tr>
+                            &lt;td align="left" style="font-family: {{f_fami}}; font-size: {{f_size}}px; vertical-align: top; padding-bottom: 16px;" valign="top">
+                              &lt;table role="presentation" border="0" cellpadding="0" cellspacing="0" style="border-collapse: separate; mso-table-lspace: 0pt; mso-table-rspace: 0pt; width: auto; margin: 0 auto;">
+                                &lt;tbody>
+                                  &lt;tr>
+                                    &lt;td style="font-family: {{f_fami}}; font-size: {{f_size}}px; vertical-align: top; border-radius: 50%; text-align: center; background-color: {{color_key}};" valign="top" align="center" bgcolor="{{color_key}}">
+                                        &lt;a href="#" target="_blank" style="border: solid 2px {{color_key}}; box-sizing: border-box; cursor: pointer; display: inline-block; font-size: {{f_size}}px; font-weight: bold; margin: 0; padding: 12px 24px; text-decoration: none; text-transform: capitalize; background-color: {{color_key}}; border-color: {{color_key}}; color: #000000; transition: 0.2s; {% if shape is same as "round" %} border-radius: 20px; {% endif %}">Log in&lt;/a>
+                                    &lt;/td>
+                                  &lt;/tr>
+                                &lt;/tbody>
+                              &lt;/table>
+                            &lt;/td>
+                          &lt;/tr>
+                        &lt;/tbody>
+                      &lt;/table>
+                      &lt;p style="font-family: {{f_fami}}; font-size: {{f_size}}px; font-weight: normal; margin: 0; margin-bottom: 20px; color: #000000;">If you have any questions, please don’t hesitate to contact us.&lt;/p> 
+                      &lt;p style="font-family: {{f_fami}}; font-size: {{f_size}}px; font-weight: normal; margin: 0; margin-bottom: 20px; color: #000000;">Thank you,&lt;/p> 
+                      &lt;p style="font-family: {{f_fami}}; font-size: {{f_size}}px; font-weight: normal; margin: 0; margin-bottom: 20px; color: #000000;">[Company name]&lt;/p>
+                      {% if footer is same as  "footer_in" %}
+                      {% include "email/components/footer.html.twig" %}
+{% endif %}
+                    &lt;/td>
+                  &lt;/tr>
+                &lt;/table>
+                {% if footer is same as  "footer_out" %}
+                {% include "email/components/footer.html.twig" %}
+{% endif %}
+               &lt;/div>
+            &lt;/td>
+            &lt;td>&amp;nbsp;&lt;/td>
+          &lt;/tr>
+        &lt;/table>
+      &lt;/body>
+    &lt;/html>
+{% endblock %}
+
